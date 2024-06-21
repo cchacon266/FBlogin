@@ -91,6 +91,7 @@ body {
   height: auto;
   display: block;
   margin: 40px auto 0;
+  position:relative
 }
 
 /* Media Queries para dispositivos móviles */
