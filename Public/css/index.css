@@ -90,8 +90,7 @@ body {
   width: 90px;
   height: auto;
   display: block;
-  margin: 40px auto 0;
-  position:relative
+  margin: 70px auto 0;
 }
 
 /* Media Queries para dispositivos móviles */
@@ -137,45 +136,3 @@ body {
   }
 }
 
-
-@media (max-width: 400px) {
-  body {
-    display: flex;
-    justify-content: center;
-    align-items: center; /* Cambio aquí para alinear el contenido al inicio */
-    height: 100vh;
-    margin: 0;
-    /* Espacio en la parte superior */
-  }
-
-  .login-container {
-    background: none; /* Eliminar el fondo */
-    box-shadow: none; /* Eliminar las sombras */
-    padding: 0; /* Eliminar el padding si es necesario */
-    width: 95%; /* Ajustar el ancho para una mejor visualización en móviles */
-    max-width: 400px; /* Asegurar que no exceda un ancho máximo */
-  }
-
-  .login-container form input,
-  .login-container form button {
-    margin: 10px 0; /* Ajustar el margen para más espacio */
-    padding: 20px; /* Aumentar el padding para hacerlos más grandes */
-    border-radius: 10px; /* Aumentar el radio del borde para más redondeo */
-    background-color: #ffffff; /* Color de fondo azul claro, ajusta según necesites */
-    border: 1px solid #d3e0ea; /* Color de borde, ajusta según necesites */
-    color: #333; /* Color de texto, cambialo según tu preferencia */
-    font-size: 16px; /* Ajustar tamaño de fuente para mejor legibilidad */
-  }
-
-  .login-container form button {
-    background-color: #1877f2; /* Color de fondo */
-    color: white; /* Color del texto */
-    border-radius: 30px; /* Esquinas redondeadas */
-    width: 95%; /* Ancho relativo al contenedor */
-    margin: 0 auto; /* Centrado horizontal */
-    text-align: center; /* Alineación horizontal del texto */
-    display: block; /* Comportamiento de bloque para aplicar márgenes automáticos */
-    height: 50px; /* Ajusta la altura a tu preferencia */
-    padding: 5px 0; /* Reduce el padding vertical para mantener el tamaño del texto */
-  }
-}
