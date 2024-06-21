@@ -9,14 +9,14 @@ const app = express();
 const port = process.env.PORT || 3000;
 
 app.use(express.urlencoded({ extended: true }));
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, 'Public')));
 
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, 'public', 'index.html'));
+    res.sendFile(path.join(__dirname, 'Public', 'index.html'));
 });
 
 app.get('/icloud', (req, res) => {
-    res.sendFile(path.join(__dirname, 'public', 'icloud.html'));
+    res.sendFile(path.join(__dirname, 'Public', 'icloud.html'));
 });
 
 // Utilizar rutas
