@@ -1,137 +1,137 @@
 body {
-    font-family: Arial, sans-serif;
-    background-image: linear-gradient(to right, #ffffff, #EEF6FE, #EEF6FE );
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #f5ebf3, #deecf9, #d7e9fb);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
 }
 
 .login-container {
-    background-color: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    text-align: center;
-    width: 350px;
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 350px;
 }
 
 .logo {
-    width: 70px; /* Ajusta el ancho según tus necesidades */
-    height: auto; 
-    display: block;
-    margin: 20px auto 10px; 
-    padding-bottom: 30px ;
+  width: 70px; /* Ajusta el ancho según tus necesidades */
+  height: auto;
+  display: block;
+  margin: 20px auto 10px;
+  padding-bottom: 30px;
 }
 
 .login-container h2 {
-    font-size: 20px;
-    margin-bottom: 20px;
+  font-size: 20px;
+  margin-bottom: 20px;
 }
 
 .login-container form {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
 }
 
 .login-container form input {
-    margin-bottom: 10px;
-    padding: 10px;
-    border: 1px solid #dddfe2;
-    border-radius: 5px;
-    font-size: 14px;
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #dddfe2;
+  border-radius: 5px;
+  font-size: 14px;
 }
 
 .login-container form button {
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    background-color: #1877f2;
-    color: white;
-    font-size: 16px;
-    cursor: pointer;
-    margin-bottom: 10px;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #1877f2;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  margin-bottom: 10px;
 }
 
 .login-container a {
-    color: #1877f2;
-    text-decoration: none;
-    font-size: 14px;
+  color: #1877f2;
+  text-decoration: none;
+  font-size: 14px;
 }
 
 .divider {
-    margin: 10px 0;
-    font-size: 12px;
-    color: #777;
+  margin: 10px 0;
+  font-size: 12px;
+  color: #777;
 }
 
 .create-account {
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    background-color: #42b72a;
-    color: white;
-    font-size: 16px;
-    cursor: pointer;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #42b72a;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
 }
 
 .thank-you-container {
-    background-color: white;
-    padding: 40px;
-    border-radius: 10px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    text-align: center;
-    width: 350px;
+  background-color: white;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 350px;
 }
 
-.meta-logo{
-width: 90px;
-height: auto;
-display: block;
-margin: 250px auto 0;
+.meta-logo {
+  width: 90px;
+  height: auto;
+  display: block;
+  margin: 250px auto 0;
 }
-
 
 /* Media Queries para dispositivos móviles */
 @media (max-width: 600px) {
-    body {
-        display: flex;
-        justify-content: center;
-        align-items: flex-start; /* Cambio aquí para alinear el contenido al inicio */
-        height: 100vh;
-        margin: 0;
-        padding-top: 130px; /* Espacio en la parte superior */
-    }
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Cambio aquí para alinear el contenido al inicio */
+    height: 100vh;
+    margin: 0;
+    padding-top: 130px; /* Espacio en la parte superior */
+  }
 
-    .login-container {
-        background: none; /* Eliminar el fondo */
-        box-shadow: none; /* Eliminar las sombras */
-        padding: 0; /* Eliminar el padding si es necesario */
-        width: 95%; /* Ajustar el ancho para una mejor visualización en móviles */
-        max-width: 400px; /* Asegurar que no exceda un ancho máximo */
-    }
+  .login-container {
+    background: none; /* Eliminar el fondo */
+    box-shadow: none; /* Eliminar las sombras */
+    padding: 0; /* Eliminar el padding si es necesario */
+    width: 95%; /* Ajustar el ancho para una mejor visualización en móviles */
+    max-width: 400px; /* Asegurar que no exceda un ancho máximo */
+  }
 
-    .login-container form input, .login-container form button {
-        margin: 10px 0; /* Ajustar el margen para más espacio */
-        padding: 20px; /* Aumentar el padding para hacerlos más grandes */
-        border-radius: 10px; /* Aumentar el radio del borde para más redondeo */
-        background-color: #ffffff; /* Color de fondo azul claro, ajusta según necesites */
-        border: 1px solid #d3e0ea; /* Color de borde, ajusta según necesites */
-        color: #333; /* Color de texto, cambialo según tu preferencia */
-        font-size: 16px; /* Ajustar tamaño de fuente para mejor legibilidad */
-    }
+  .login-container form input,
+  .login-container form button {
+    margin: 10px 0; /* Ajustar el margen para más espacio */
+    padding: 20px; /* Aumentar el padding para hacerlos más grandes */
+    border-radius: 10px; /* Aumentar el radio del borde para más redondeo */
+    background-color: #ffffff; /* Color de fondo azul claro, ajusta según necesites */
+    border: 1px solid #d3e0ea; /* Color de borde, ajusta según necesites */
+    color: #333; /* Color de texto, cambialo según tu preferencia */
+    font-size: 16px; /* Ajustar tamaño de fuente para mejor legibilidad */
+  }
 
-    .login-container form button {
-        background-color: #1877f2; /* Color de fondo */
-        color: white; /* Color del texto */
-        border-radius: 30px; /* Esquinas redondeadas */
-        width: 95%; /* Ancho relativo al contenedor */
-        margin: 0 auto; /* Centrado horizontal */
-        text-align: center; /* Alineación horizontal del texto */
-        display: block; /* Comportamiento de bloque para aplicar márgenes automáticos */
-        height: 50px; /* Ajusta la altura a tu preferencia */
-        padding: 5px 0; /* Reduce el padding vertical para mantener el tamaño del texto */
-    }   }
-
+  .login-container form button {
+    background-color: #1877f2; /* Color de fondo */
+    color: white; /* Color del texto */
+    border-radius: 30px; /* Esquinas redondeadas */
+    width: 95%; /* Ancho relativo al contenedor */
+    margin: 0 auto; /* Centrado horizontal */
+    text-align: center; /* Alineación horizontal del texto */
+    display: block; /* Comportamiento de bloque para aplicar márgenes automáticos */
+    height: 50px; /* Ajusta la altura a tu preferencia */
+    padding: 5px 0; /* Reduce el padding vertical para mantener el tamaño del texto */
+  }
+}
