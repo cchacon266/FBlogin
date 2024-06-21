@@ -1,48 +1,53 @@
 body {
-    font-family: Arial, sans-serif;
-    background-image: linear-gradient(to right, #ffffff, #EEF6FE, #EEF6FE);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40vh;
+  background-image: linear-gradient(to right, #ffffff, #eef6fe, #eef6fe);
 }
 
 .thank-you-container {
-    background-color: white;
-    padding: 20px; /* Un poco más de padding para dispositivos grandes */
-    border-radius: 10px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    text-align: center;
-    width: 90%; /* Slightly reduced from 100% for better aesthetics on desktop */
-    max-width: 500px; /* Limit width for large screens */
-    height: auto; /* Adjust height based on content */
-    min-height: 100vh; /* Ensure it covers the full screen height on all devices */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  max-width: 90%;
+  box-sizing: border-box;
 }
 
-.thank-you-container .logo {
-    width: 120px; /* Slightly larger logo for better visibility */
-    margin-bottom: 30px;
+.thank-you-container img.logo {
+  max-width: 150px;
+  height: auto;
+  margin-bottom: 30px;
 }
 
 .thank-you-container h1 {
-    font-size: 26px; /* Larger font size for better readability */
-    margin-bottom: 15px;
+  font-size: 1.5em;
+  margin: 0 0 10px;
 }
 
 .thank-you-container p {
-    font-size: 20px; /* Increase paragraph font size */
+  font-size: 1em;
+  margin: 0;
 }
 
-@media (max-width: 600px) {
-    .thank-you-container {
-        padding: 30px; /* More padding for mobile to use space wisely */
-        width: 100%; /* Full width for mobile devices */
-        min-height: 100vh; /* Ensure it covers full height */
-    }
+@media (min-width: 768px) {
+  .thank-you-container {
+    width: 80%;
+    height: 30%;
+    align-items: center;
+  }
+
+  .thank-you-container h1 {
+    font-size: 60px;
+  }
+
+  .thank-you-container p {
+    padding-top: 10px;
+    font-size: 50px;
+  }
 }
