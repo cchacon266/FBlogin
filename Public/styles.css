@@ -1,6 +1,6 @@
 body {
     font-family: Arial, sans-serif;
-    background-image: linear-gradient(to right, #ffffff, #EDF6FE, #EDF6FE);
+    background-image: linear-gradient(to right, #ffffff, #EEF6FE, #EEF6FE );
     display: flex;
     justify-content: center;
     align-items: center;
@@ -99,6 +99,15 @@ body {
     margin-bottom: 20px;
 }
 
+.meta-logo{
+width: 90px;
+height: auto;
+display: block;
+margin: 350px auto 0;
+
+
+}
+
 
 /* Media Queries para dispositivos móviles */
 @media (max-width: 600px) {
@@ -123,7 +132,7 @@ body {
         margin: 10px 0; /* Ajustar el margen para más espacio */
         padding: 15px; /* Aumentar el padding para hacerlos más grandes */
         border-radius: 20px; /* Aumentar el radio del borde para más redondeo */
-        background-color: #EDF6FE; /* Color de fondo azul claro, ajusta según necesites */
+        background-color: #ffffff; /* Color de fondo azul claro, ajusta según necesites */
         border: 1px solid #d3e0ea; /* Color de borde, ajusta según necesites */
         color: #333; /* Color de texto, cambialo según tu preferencia */
         font-size: 16px; /* Ajustar tamaño de fuente para mejor legibilidad */
