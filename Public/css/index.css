@@ -18,8 +18,11 @@ body {
 }
 
 .logo {
-    width: 100px;
-    margin-bottom: 20px;
+    width: 70px; /* Ajusta el ancho según tus necesidades */
+    height: auto; 
+    display: block;
+    margin: 20px auto 10px; 
+    padding-bottom: 30px ;
 }
 
 .login-container h2 {
@@ -83,37 +86,12 @@ body {
     width: 350px;
 }
 
-.thank-you-container h1 {
-    font-size: 24px;
-    margin-bottom: 20px;
-    color: #333;
-}
-
-.thank-you-container p {
-    font-size: 16px;
-    color: #777;
-}
-
-.thank-you-container .logo {
-    width: 100px;
-    margin-bottom: 20px;
-}
-
 .meta-logo{
 width: 90px;
 height: auto;
 display: block;
 margin: 250px auto 0;
 }
-
-.logo {
-    width: 70px; /* Ajusta el ancho según tus necesidades */
-    height: auto; 
-    display: block;
-    margin: 20px auto 10px; 
-    padding-bottom: 30px ;
-}
-
 
 
 /* Media Queries para dispositivos móviles */

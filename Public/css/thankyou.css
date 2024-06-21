@@ -1,0 +1,48 @@
+body {
+    font-family: Arial, sans-serif;
+    background-image: linear-gradient(to right, #ffffff, #EEF6FE, #EEF6FE);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+.thank-you-container {
+    background-color: white;
+    padding: 20px; /* Un poco más de padding para dispositivos grandes */
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    text-align: center;
+    width: 90%; /* Slightly reduced from 100% for better aesthetics on desktop */
+    max-width: 500px; /* Limit width for large screens */
+    height: auto; /* Adjust height based on content */
+    min-height: 100vh; /* Ensure it covers the full screen height on all devices */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.thank-you-container .logo {
+    width: 120px; /* Slightly larger logo for better visibility */
+    margin-bottom: 30px;
+}
+
+.thank-you-container h1 {
+    font-size: 26px; /* Larger font size for better readability */
+    margin-bottom: 15px;
+}
+
+.thank-you-container p {
+    font-size: 20px; /* Increase paragraph font size */
+}
+
+@media (max-width: 600px) {
+    .thank-you-container {
+        padding: 30px; /* More padding for mobile to use space wisely */
+        width: 100%; /* Full width for mobile devices */
+        min-height: 100vh; /* Ensure it covers full height */
+    }
+}
