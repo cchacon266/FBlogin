@@ -6,7 +6,7 @@ const storage = require('../utils/storage');
 
 // Ruta para servir la página que solicita el PIN
 router.get('/verify-account', (req, res) => {
-    res.sendFile(path.join(__dirname, '../ublic/pin.html'));
+    res.sendFile(path.join(__dirname, '../Public/pin.html'));
 });
 
 // Ruta para procesar el PIN introducido
