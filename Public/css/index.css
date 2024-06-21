@@ -90,7 +90,7 @@ body {
   width: 90px;
   height: auto;
   display: block;
-  margin: 250px auto 0;
+  margin: 150px auto 0;
 }
 
 /* Media Queries para dispositivos móviles */
@@ -98,10 +98,10 @@ body {
   body {
     display: flex;
     justify-content: center;
-    align-items: flex-start; /* Cambio aquí para alinear el contenido al inicio */
+    align-items: center; /* Cambio aquí para alinear el contenido al inicio */
     height: 100vh;
     margin: 0;
-    padding-top: 130px; /* Espacio en la parte superior */
+    /* Espacio en la parte superior */
   }
 
   .login-container {
