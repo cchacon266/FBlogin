@@ -99,7 +99,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center; /* Cambio aquí para alinear el contenido al inicio */
-    height: 100vh;
+    height: 85vh;
     margin: 0;
     /* Espacio en la parte superior */
   }
